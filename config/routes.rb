@@ -1,4 +1,16 @@
 Rails.application.routes.draw do
+  get 'items/index'
+
+  get 'items/show'
+
+  get 'items/new'
+
+  get 'opinions/index'
+
+  get 'opinions/show'
+
+  get 'opinions/new'
+
   root to: 'home#index'
   devise_for :users, controllers: { registrations: 'registrations'}
 
