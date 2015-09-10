@@ -1,20 +1,11 @@
 Rails.application.routes.draw do
-  get 'items/index'
+  devise_for :users
 
-  get 'items/show'
-
-  get 'items/new'
-
-  get 'opinions/index'
-
-  get 'opinions/show'
-
-  get 'opinions/new'
+  resources  :opinions
+  resources :items
 
   root to: 'home#index'
-  devise_for :users, controllers: { registrations: 'registrations'}
 
-  resources :user
 
 
   # The priority is based upon order of creation: first created -> highest priority.
